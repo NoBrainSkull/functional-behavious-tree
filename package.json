@@ -1,0 +1,77 @@
+{
+  "name": "behaviour-tree",
+  "version": "1.0.0",
+  "description": "Attempt to prototype a functional basic behaviour-tree",
+  "main": "index.js",
+  "dependencies": {
+    "ramda": "^0.26.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sorian@nutshell-lab.com",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/register": "^7.0.0",
+    "ava": "2.2.0",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-import-graphql": "^2.6.2",
+    "babel-plugin-module-resolver": "^3.1.1",
+    "casual": "^1.6.2",
+    "eslint": "^5.9.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-config-prettier-standard": "^1.0.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-import-resolver-babel-module": "^5.0.0-beta.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "imports-loader": "^0.8.0",
+    "pre-commit": "^1.2.2",
+    "prettier": "^1.15.2",
+    "properties": "^1.2.1",
+    "webpack": "^4.26.0",
+    "webpack-cli": "^3.1.2",
+    "webpack-node-externals": "^1.7.2",
+    "xo": "^0.23.0"
+  },
+  "engines": {
+    "node": ">= 4.0.0",
+    "npm": ">= 3.0.0"
+  },
+  "xo": {
+    "space": true,
+    "semicolon": false,
+    "prettier": true,
+    "extends": [
+      "prettier-standard"
+    ],
+    "settings": {
+      "import/resolver": {
+        "babel-module": {}
+      }
+    }
+  },
+  "prettier": {
+    "bracketSpacing": true
+  },
+  "ava": {
+    "concurrency": 5,
+    "failFast": true,
+    "files": [
+      "src/**/*.spec.js"
+    ],
+    "sources": [
+      "src/**/*.js"
+    ],
+    "require": [
+      "@babel/register"
+    ]
+  }
+}
